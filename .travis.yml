@@ -1,6 +1,8 @@
 sudo: required
 services: 
         - docker
+language: generic
+before_deploy: "echo 'ready?'"
 deploy:
         provider: elasticbeanstalk
         region: "us-east-1"
@@ -8,6 +10,7 @@ deploy:
         env: "Dashbord-env"
         bucket_name: "elasticbeanstalk-us-east-1-518268222591"
         bucket_path: "Dashbord"
+        skip_cleanup: true
         on:
           branch: master
         access_key_id: "$AwsAccessUser"
