@@ -11,5 +11,5 @@ deploy:
         bucket_path: "Dashbord"
         on:
           branch: master
-        access_key_id: "$ACCESS_KEY_ID"
-        secret_access_key: "$SECRET_ACCES_KEY"
+        access_key_id: "$AwsAccessUser"
+        secret_access_key: "$AwsAccessUserSecret"
