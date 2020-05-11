@@ -1,0 +1,14 @@
+sudo: required
+services: 
+        - docker
+deploy:
+        provider: elasticbeanstalk
+        region: "us-east-1"
+        app: "Dashbord"
+        env: "Dashbord-env"
+        bucket_name: "elasticbeanstalk-us-east-1-518268222591"
+        bucket_path: "Dashbord"
+        on:
+          branch: master
+        access_key_id: "$ACCESS_KEY_ID"
+        secret_access_key: "$SECRET_ACCES_KEY"
