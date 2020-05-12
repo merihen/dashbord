@@ -22,6 +22,7 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
     
     - run: |
+        echo ${{ secrets.DOCKER_PASSWORD }} | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
         docker build . -t merihen/dashbord:${{ github.sha }}
         docker push merihen/dashbord:${{ github.sha }} 
       
